@@ -1,0 +1,26 @@
+{
+  "name": "social-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "postcss assets/css/style.css -o assets/css/compiled.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alifaraji64/facebook-clone-with-php.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alifaraji64/facebook-clone-with-php/issues"
+  },
+  "homepage": "https://github.com/alifaraji64/facebook-clone-with-php#readme",
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "postcss": "^8.2.0",
+    "postcss-cli": "^8.3.0",
+    "tailwindcss": "^2.0.1"
+  }
+}

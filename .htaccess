@@ -1,0 +1,8 @@
+RewriteEngine On
+ RewriteRule ^([a-zA-Z0-9_-]+)$ pages/profile.php?profile_username=$1
+ RewriteRule ^([a-zA-Z0-9_-]+)/$ pages/profile.php?profile_username=$1
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)\.php$ pages/$1.php [L]
+RewriteRule ^$ pages/index.php [L]
+# these rules are going redirect the user to the profile page (profile.php)

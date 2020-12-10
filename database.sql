@@ -14,3 +14,22 @@ CREATE TABLE `social`.`users`
     `friend_array` TEXT NOT NULL ,
      PRIMARY KEY (`id`)
      ) ENGINE = InnoDB;
+
+
+CREATE TABLE `social`.`posts` (
+ `id` INT NOT NULL ,
+ `body` TEXT NOT NULL ,
+ `added_by` VARCHAR(60) NOT NULL ,
+ `user_to` VARCHAR(60) NOT NULL ,
+ `date_added` DATETIME NOT NULL ,
+ `user_closed` VARCHAR(3) NOT NULL ,
+ `deleted` VARCHAR(3) NOT NULL ,
+ `likes` INT NOT NULL
+ ) ENGINE = InnoDB;
+
+ CREATE TABLE `social`.`likes` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `username` VARCHAR(60) NOT NULL ,
+  `post_id` INT NOT NULL ,
+  PRIMARY KEY (`id`)
+ ) ENGINE = InnoDB;

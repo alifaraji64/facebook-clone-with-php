@@ -1,11 +1,4 @@
 <?php
-if (!isset($_SESSION)) {
-    session_start();
-}
-$conn = mysqli_connect('localhost', 'root', '', 'social');
-if (mysqli_connect_error()) {
-    echo 'failed to connect:' . mysqli_connect_error();
-}
 //declaring vars
 $fname = '';
 $lname = '';
@@ -73,7 +66,7 @@ if (isset($_POST['register_btn'])) {
     }
     //password validation
     if ($password != $password2) {
-        echo 'your passwords do not match <br/>';
+        array_push($error_array,'your passwords do not match <br/>');
     } else {
         if (preg_match('/[^A-Za-z0-9]/', $password)) {
             array_push($error_array,'your password can only contain english characters or numbers <br/>');

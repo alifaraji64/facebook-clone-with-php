@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.log_reg_input{
+    @apply border-2 border-gray-400 my-1.5;
+}
+
+.nav_link_hover:hover {
+        @apply border-b-4 border-yellow-500 ;
+}
