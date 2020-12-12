@@ -32,7 +32,7 @@
 
         public function getFirstAndLastName()
         {
-            return $this->user['first_name'] . ' ' . $this->user['last_name'];
+            return $this->user['first_name'] . '-' . $this->user['last_name'];
         }
 
         public function isClosed()

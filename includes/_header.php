@@ -22,18 +22,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/compiled.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>index index</title>
 </head>
 <body class="min-h-screen bg-gray-200">
-    <nav class="bg-blue-500 flex justify-between h-9 items-center">
+    <nav class="bg-blue-500 flex justify-between h-9 items-center" id="nav">
         <div>
             <h1 class="text-xl font-bold text-white ml-1">Facebook clone <i class="fab fa-facebook"></i></h1>
         </div>
-        <div class="flex w-56 justify-around items-center text-white">
+        <div class="flex justify-around items-center text-white">
            <a href="" class="nav_link_hover">
-                <span>
+                <div class='break-normal'>
                     <?php echo $user_obj->getFirstAndLastName();?>
-                </span>
+                </div>
             </a>
             <a href="index.php" class="nav_link_hover">
                 <i class="fa fa-home fa-lg"></i>

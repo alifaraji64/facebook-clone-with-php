@@ -6,5 +6,8 @@
 }
 
 .nav_link_hover:hover {
-        @apply border-b-4 border-yellow-500 ;
+        @apply border-b-4 border-yellow-500  ;
+}
+.nav_link_hover {
+        @apply mx-2  ;
 }

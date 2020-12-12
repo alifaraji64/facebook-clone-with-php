@@ -31181,6 +31181,11 @@ video {
   border-bottom-width: 4px;
 }
 
+.nav_link_hover {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
