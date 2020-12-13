@@ -42,4 +42,18 @@
             else
                 return false;
         }
+
+        public function isFriend($username_to_check){
+            $usernameComma = ',' . $username_to_check . ',';
+            $res = strstr($this->user['friend_array'],$usernameComma);
+            if($res || $username_to_check == $this->user['username'])
+            {
+                    //the respective person is our friend
+                    return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }

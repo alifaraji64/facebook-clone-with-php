@@ -7,6 +7,6 @@
     unset($_SESSION['username']);
     unset($_SESSION['email']);
     //redirect to register page
-    header('Location: ../register.php');
+    header('Location: ../login.php');
     exit();
 ?>

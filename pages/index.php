@@ -1,4 +1,3 @@
-
 <?php
     include('../includes/_header.php');
     include('../includes/classes/Post.php');
@@ -29,36 +28,6 @@
 
         </div>
     </div>
-    <script>
-        var userLoggedIn = '<?php echo $userLoggedIn?>';
-        $(document).ready(function(){
-            $('#spinner').show();
-            //ajax request for loading first post
-            $.ajax({
-                url:"includes/_ajax_load_posts.php",
-                type:"POST",
-                data:'page=1&userLoggedIn='+ userLoggedIn,
-                cache:false,
-                success:function(data){
-                    $('#spinner').hide();
-                    $('#posts_area').html(data);
-                }
-            })
-            $(window).scroll(function(){
-                var height = $('#posts_area').height();
-                var scroll_top = $(this).scrollTop();
-                var navHeight = $('#nav').height();
-                console.log('yoo');
-                //var page = $('#posts_area').find('.nextPage').val();
-                //var noMorePosts = $('#posts_area').find('.noMorePosts').val();
-                noMorePosts = 'false';
-                if($(window).scrollTop() + $(window).height() > $(document).height() -0.5   ) {
-                    console.log('bottom');
-                    console.log($(window));
-                    console.log($(document));
-                }
-            })
-        });
-    </script>
+    <script src="assets/js/infinite_scroll.js"></script>
 </body>
 </html>
